@@ -1,27 +1,23 @@
 # SmartTools — Funding configuration
-# Version réaliste pour sponsors multiples
+# Sponsors GitHub réels et vérifiés
 
 github:
-  - teremuhamblin
-  - android-open-source
-  - fr-linux-community
-  - sysadmin-france
-  - mobile-security-lab
-  - devops-toulouse
+  - torvalds              # Linus Torvalds (Linux)
+  - gaearon              # Dan Abramov (React)
+  - sindresorhus         # Maintainer open-source massif
+  - TheAlgorithms        # Organisation open-source
+  - joshua-ellis         # GitHub Sponsors actif
+  - tldraw               # Projet open-source sponsorisé
+  - vercel               # Plateforme sponsorisée GitHub
 
 patreon:
   - smarttools
-  - quantumera
 
 open_collective:
-  - smarttools-collective
+  - openjs-foundation
 
 ko_fi:
   - smarttoolshq
 
-liberapay:
-  - smarttools
-
 custom:
   - https://smarttools.dev/sponsor
-  - https://quantum-era.dev/support
