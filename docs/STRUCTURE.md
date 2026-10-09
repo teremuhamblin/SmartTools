@@ -1,7 +1,9 @@
 # 📄 SmartTools
 Structure globale du projet, optimisée pour la clarté et la sécurité.
 
-📁 Arborescence
+### 📁 Arborescence
+### 📁 Structure du Projet
+
 ```text
 SmartTools/
 ├── docs/
@@ -47,7 +49,7 @@ SmartTools/
 │   │   ├── feature_request.md
 │   │   └── security_issue.md
 │   │
-│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── PULLREQUESTTEMPLATE.md
 │   └── CODEOWNERS
 │
 ├── config/
