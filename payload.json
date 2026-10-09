@@ -1,0 +1,9 @@
+{
+  "project": "SmartTools",
+  "module": "Core",
+  "event": "{{event}}",
+  "repository": "{{repository.name}}",
+  "branch": "{{ref}}",
+  "sender": "{{sender.login}}",
+  "timestamp": "{{date}}"
+}
