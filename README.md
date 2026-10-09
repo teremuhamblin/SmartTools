@@ -26,64 +26,7 @@
 ---
 
 ### 📁 Structure du Projet
-
-```text
-SmartTools/
-├── docs/
-│   ├── README.md
-│   ├── ARCHITECTURE.md
-│   ├── SECURITY.md
-│   ├── CODEOFCONDUCT.md
-│   ├── STRUCTURE.md
-│   ├── WEBHOOKS.md
-│   ├── MODULES.md
-│   └── CHANGELOG.md
-│
-├── tools/
-│   ├── android/
-│   │   ├── device-info.sh
-│   │   ├── battery-check.sh
-│   │   └── network-scan.sh
-│   │
-│   ├── samsung/
-│   │   ├── oem-check.sh
-│   │   ├── magisk-helper.sh
-│   │   └── smart-diagnostics.sh
-│   │
-│   └── system/
-│       ├── cleanup.sh
-│       ├── sys-report.sh
-│       └── storage-map.sh
-│
-├── server/
-│   ├── webhook-server.js
-│   ├── discord.js
-│   ├── telegram.js
-│   └── email.js
-│
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml
-│   │   ├── deploy.yml
-│   │   └── security-scan.yml
-│   │
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   │   └── security_issue.md
-│   │
-│   ├── PULLREQUESTTEMPLATE.md
-│   └── CODEOWNERS
-│
-├── config/
-│   ├── discord.json
-│   ├── telegram.json
-│   ├── email.json
-│   └── smarttools.conf
-│
-├── LICENSE
-└── README.md
-```
+>VOIR ~/docs/STRUCTURE.md
 
 ---
 
@@ -105,13 +48,14 @@ SmartTools/
 Toute la documentation est centralisée dans /docs.
 
 >Contenu :
-- ARCHITECTURE.md — Architecture globale du projet  
-- SECURITY.md — Politique de sécurité renforcée  
-- STRUCTURE.md — Structure interne détaillée  
-- WEBHOOKS.md — Webhooks Discord / Telegram / Email  
-- MODULES.md — Description des modules Android / Samsung / System  
-- CHANGELOG.md — Historique des versions  
-- CODEOFCONDUCT.md — Règles de contribution  
+
+###### - ARCHITECTURE.md — Architecture globale du projet  
+###### - SECURITY.md — Politique de sécurité renforcée  
+###### - STRUCTURE.md — Structure interne détaillée  
+###### - WEBHOOKS.md — Webhooks Discord / Telegram / Email  
+###### - MODULES.md — Description des modules Android / Samsung / System  
+###### - CHANGELOG.md — Historique des versions  
+###### - CODEOFCONDUCT.md — Règles de contribution  
 
 ---
 
@@ -119,61 +63,64 @@ Toute la documentation est centralisée dans /docs.
 
 ### 📱 Android Tools
 >Scripts pour diagnostics et analyse Android :
-- [x] device-info.sh — Informations complètes de l’appareil  
-- [x] battery-check.sh — Analyse batterie & santé  
-- [x] network-scan.sh — Scan réseau & interfaces  
+   - [x] device-info.sh — Informations complètes de l’appareil  
+   - [x] battery-check.sh — Analyse batterie & santé  
+   - [x] network-scan.sh — Scan réseau & interfaces  
 
 ### 📡 Samsung Tools
 >Outils spécialisés Samsung :
-- [x] oem-check.sh — Vérification OEM Unlock  
-- [x] magisk-helper.sh — Aide à l’installation Magisk  
-- [x] smart-diagnostics.sh — Diagnostic complet Samsung  
+   - [x] oem-check.sh — Vérification OEM Unlock  
+   - [x] magisk-helper.sh — Aide à l’installation Magisk  
+   - [x] smart-diagnostics.sh — Diagnostic complet Samsung  
 
 ### 🖥️ System Tools
 >Scripts système Linux :
-- [x] cleanup.sh — Nettoyage intelligent  
-- [x] sys-report.sh — Rapport système complet  
-- [x] storage-map.sh — Cartographie du stockage  
+   - [x] cleanup.sh — Nettoyage intelligent  
+   - [x] sys-report.sh — Rapport système complet  
+   - [x] storage-map.sh — Cartographie du stockage  
 
 ---
 
 ### 🌐 Serveur Webhooks
 >Serveur Node.js pour intégration externe :
-
+```markdown
 - [x] webhook-server.js — Serveur principal  
 - [x] discord.js — Envoi vers Discord  
 - [x] telegram.js — Envoi vers Telegram  
 - [x] email.js — Envoi email via SMTP  
 
 Fonctionne avec les fichiers de configuration /config.
+```
 
 ---
 
 ### 🔒 Sécurité
+```md
 - [x] Secrets isolés dans /config  
 - [x] CI/CD avec scan de sécurité (security-scan.yml)  
 - [x] Aucun mot de passe dans le code  
 - [x] Scripts vérifiés manuellement  
 - [x] Architecture Zero‑Trust minimale  
 - [x] Webhooks sécurisés par tokens  
+```
 
 ---
 
 ### ⚙️ CI/CD
 >Workflows GitHub Actions :
-- [x] ci.yml — Build & tests  
-- [x] deploy.yml — Déploiement automatique  
-- [x] security-scan.yml — Analyse de sécurité  
+   - [x] ci.yml — Build & tests  
+   - [x] deploy.yml — Déploiement automatique  
+   - [x] security-scan.yml — Analyse de sécurité  
 
 ---
 
 ### 🤝 Contribution
 >Templates disponibles :
-- [x] Bug Report  
-- [x] Feature Request  
-- [x] Security Issue  
-- [x] Pull Request Template  
-- [x] CODEOWNERS défini  
+###### - [x] Bug Report  
+   ###### - [x] Feature Request  
+   ###### - [x] Security Issue  
+   ###### - [x] Pull Request Template  
+   ###### - [x] CODEOWNERS défini  
 
 ---
 
