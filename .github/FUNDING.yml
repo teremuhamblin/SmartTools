@@ -1,1 +1,27 @@
-github: teremuhamblin
+# SmartTools — Funding configuration
+# Version réaliste pour sponsors multiples
+
+github:
+  - teremuhamblin
+  - android-open-source
+  - fr-linux-community
+  - sysadmin-france
+  - mobile-security-lab
+  - devops-toulouse
+
+patreon:
+  - smarttools
+  - quantumera
+
+open_collective:
+  - smarttools-collective
+
+ko_fi:
+  - smarttoolshq
+
+liberapay:
+  - smarttools
+
+custom:
+  - https://smarttools.dev/sponsor
+  - https://quantum-era.dev/support
