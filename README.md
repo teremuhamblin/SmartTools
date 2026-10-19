@@ -49,6 +49,7 @@ Toute la documentation est centralisée dans /docs.
 
 >Contenu :
 
+```text
 ###### - ARCHITECTURE.md — Architecture globale du projet  
 ###### - SECURITY.md — Politique de sécurité renforcée  
 ###### - STRUCTURE.md — Structure interne détaillée  
@@ -56,6 +57,7 @@ Toute la documentation est centralisée dans /docs.
 ###### - MODULES.md — Description des modules Android / Samsung / System  
 ###### - CHANGELOG.md — Historique des versions  
 ###### - CODEOFCONDUCT.md — Règles de contribution  
+```
 
 ---
 
@@ -63,21 +65,27 @@ Toute la documentation est centralisée dans /docs.
 
 ### 📱 Android Tools
 >Scripts pour diagnostics et analyse Android :
+```text
    - [x] device-info.sh — Informations complètes de l’appareil  
    - [x] battery-check.sh — Analyse batterie & santé  
-   - [x] network-scan.sh — Scan réseau & interfaces  
+   - [x] network-scan.sh — Scan réseau & interfaces
+```
 
 ### 📡 Samsung Tools
 >Outils spécialisés Samsung :
+```text
    - [x] oem-check.sh — Vérification OEM Unlock  
    - [x] magisk-helper.sh — Aide à l’installation Magisk  
    - [x] smart-diagnostics.sh — Diagnostic complet Samsung  
+```
 
 ### 🖥️ System Tools
 >Scripts système Linux :
+```md
    - [x] cleanup.sh — Nettoyage intelligent  
    - [x] sys-report.sh — Rapport système complet  
    - [x] storage-map.sh — Cartographie du stockage  
+```
 
 ---
 
@@ -88,9 +96,9 @@ Toute la documentation est centralisée dans /docs.
 - [x] discord.js — Envoi vers Discord  
 - [x] telegram.js — Envoi vers Telegram  
 - [x] email.js — Envoi email via SMTP  
-
-Fonctionne avec les fichiers de configuration /config.
 ```
+
+Fonctionne avec les fichiers de configuration **/config**.
 
 ---
 
@@ -108,9 +116,11 @@ Fonctionne avec les fichiers de configuration /config.
 
 ### ⚙️ CI/CD
 >Workflows GitHub Actions :
+```md
    - [x] ci.yml — Build & tests  
    - [x] deploy.yml — Déploiement automatique  
    - [x] security-scan.yml — Analyse de sécurité  
+```
 
 ---
 
