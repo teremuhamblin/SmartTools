@@ -1,8 +1,8 @@
 version: 2
 updates:
-  # -------------------------------------------------------------
-  # 1. Dépendances Android / Kotlin dans le sous-dossier /app
-  # -------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  # 1. Dépendances Android / Kotlin (Gradle dans le sous-dossier /app)
+  # ---------------------------------------------------------------------------
   - package-ecosystem: "gradle"
     directory: "/app"
     schedule:
@@ -12,26 +12,51 @@ updates:
       timezone: "Europe/Paris"
     open-pull-requests-limit: 10
     commit-message:
-      prefix: "deps"
+      prefix: "deps(android)"
+    assignees:
+      - "teremuhamblin"
+    labels:
+      - "dependencies"
+      - "android"
+    
+    # Bloque les montées majeures (ex: v1.x -> v2.x) pour préserver la stabilité de la v1.0.0
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+    # Regroupe les PRs pour éviter d'être spammé
     groups:
-      # Regroupe les bibliothèques AndroidX et Google dans une seule PR
       android-core:
         patterns:
           - "androidx.*"
           - "com.google.android.*"
-      # Regroupe les montées de versions mineures et correctifs (patchs)
+      compose-ui:
+        patterns:
+          - "androidx.compose.*"
       minor-and-patch:
         update-types:
           - "minor"
           - "patch"
 
-  # -------------------------------------------------------------
-  # 2. Workflows CI/CD GitHub Actions (toujours à la racine)
-  # -------------------------------------------------------------
+  # ---------------------------------------------------------------------------
+  # 2. GitHub Actions (Workflows CI/CD à la racine)
+  # ---------------------------------------------------------------------------
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    commit-message:
-      prefix: "ci"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Paris"
     open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci(deps)"
+    assignees:
+      - "teremuhamblin"
+    labels:
+      - "dependencies"
+      - "ci"
+    groups:
+      actions:
+        patterns:
+          - "*"
