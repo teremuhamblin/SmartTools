@@ -4,6 +4,10 @@
 ### 📁 Structure du Projet
 ```text
 app/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .github/
 ├── src/main/
 │   ├── AndroidManifest.xml
 │   └── java/com/smarttools/samsung/
