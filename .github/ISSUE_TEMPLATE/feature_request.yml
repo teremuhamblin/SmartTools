@@ -1,0 +1,11 @@
+name: 💡 Suggestion d'amélioration
+description: Proposer une nouvelle fonctionnalité pour SmartTools
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: Votre idée
+      description: Décrivez précisément l'outil ou l'optimisation que vous aimeriez voir dans SmartTools.
+    validations:
+      required: true
