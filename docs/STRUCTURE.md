@@ -1,65 +1,29 @@
 # 📄 SmartTools
-Structure globale du projet, optimisée pour la clarté et la sécurité.
+- *Structure globale du projet, optimisée pour la clarté et la sécurité*.
 
-### 📁 Arborescence
 ### 📁 Structure du Projet
-
 ```text
-SmartTools/
-├── docs/
-│   ├── README.md
-│   ├── ARCHITECTURE.md
-│   ├── SECURITY.md
-│   ├── CODEOFCONDUCT.md
-│   ├── STRUCTURE.md
-│   ├── WEBHOOKS.md
-│   ├── MODULES.md
-│   └── CHANGELOG.md
-│
-├── tools/
-│   ├── android/
-│   │   ├── device-info.sh
-│   │   ├── battery-check.sh
-│   │   └── network-scan.sh
-│   │
-│   ├── samsung/
-│   │   ├── oem-check.sh
-│   │   ├── magisk-helper.sh
-│   │   └── smart-diagnostics.sh
-│   │
-│   └── system/
-│       ├── cleanup.sh
-│       ├── sys-report.sh
-│       └── storage-map.sh
-│
-├── server/
-│   ├── webhook-server.js
-│   ├── discord.js
-│   ├── telegram.js
-│   └── email.js
-│
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml
-│   │   ├── deploy.yml
-│   │   └── security-scan.yml
-│   │
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   │   └── security_issue.md
-│   │
-│   ├── PULLREQUESTTEMPLATE.md
-│   └── CODEOWNERS
-│
-├── config/
-│   ├── discord.json
-│   ├── telegram.json
-│   ├── email.json
-│   └── smarttools.conf
-│
-├── LICENSE
-└── README.md
+app/
+├── src/main/
+│   ├── AndroidManifest.xml
+│   └── java/com/smarttools/samsung/
+│       ├── MainActivity.kt
+│       ├── data/
+│       │   └── DeviceSpecs.kt
+│       ├── ui/
+│       │   ├── theme/
+│       │   │   ├── Color.kt
+│       │   │   └── Theme.kt
+│       │   ├── screens/
+│       │   │   ├── DiagnosticScreen.kt
+│       │   │   ├── OptimizationScreen.kt
+│       │   │   └── AutomationScreen.kt
+│       │   └── components/
+│       │       └── OneUiCard.kt
+│       └── utils/
+│           ├── BatteryHelper.kt
+│           └── SamsungSystemHelper.kt
+└── build.gradle.kts (Module :app)
 ```
 
 ### 📌 Règles de structure
