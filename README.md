@@ -48,16 +48,13 @@
 Toute la documentation est centralisée dans /docs.
 
 >Contenu :
-
-```text
 ###### - ARCHITECTURE.md — Architecture globale du projet  
 ###### - SECURITY.md — Politique de sécurité renforcée  
 ###### - STRUCTURE.md — Structure interne détaillée  
 ###### - WEBHOOKS.md — Webhooks Discord / Telegram / Email  
 ###### - MODULES.md — Description des modules Android / Samsung / System  
 ###### - CHANGELOG.md — Historique des versions  
-###### - CODEOFCONDUCT.md — Règles de contribution  
-```
+###### - CODEOFCONDUCT.md — Règles de contribution
 
 ---
 
