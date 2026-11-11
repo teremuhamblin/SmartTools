@@ -1,149 +1,100 @@
-###### ~/README.md >> markdown
-# 🛠️ SmartTools
+<div align="center">
 
-> ###### Suite d’Outils Techniques
-> ###### Multi‑Plateforme
+  <h1>⚡ SmartTools</h1>
+  <p><strong>La suite d'outils Android ultra-légère et moderne dédiée aux smartphones Samsung.</strong></p>
 
-- Outils professionnels pour diagnostics, analyse, automatisation
-- Intégration webhook sur appareils Android, Samsung, et environnements Linux.  
-   - Projet conçu pour être simple, modulaire, sécurisé, et extensible.
+  <p>
+    <a href="#-fonctionnalités">Fonctionnalités</a> •
+    <a href="#-prérequis">Prérequis</a> •
+    <a href="#-installation">Installation</a> •
+    <a href="#-utilisation">Utilisation</a> •
+    <a href="#-contribuer">Contribuer</a>
+  </p>
 
----
+  <p>
+    <img src="https://img.shields.io/badge/Platform-Android-green?logo=android&logoColor=white" alt="Platform">
+    <img src="https://img.shields.io/badge/Optimized%20for-Samsung%20One%20UI-green?logo=samsung&logoColor=white" alt="Samsung One UI">
+    <img src="https://img.shields.io/badge/Size-%3C%2015%20MB-green" alt="App Size">
+    <img src="https://img.shields.io/badge/License-MIT-purple.svg" alt="License">
+  </p>
 
-### ✅ Statut du Projet
-
-```markdown
-- [x] Structure complète opérationnelle  
-- [x] Documentation centralisée (/docs)  
-- [x] Scripts Android / Samsung / System  
-- [x] Serveur Webhooks Discord / Telegram / Email  
-- [x] CI/CD universel  
-- [x] Sécurité renforcée  
-- [x] Templates GitHub pro  
-- [x] Configuration externe isolée (/config)
-```
+</div>
 
 ---
 
-### 📁 Structure du Projet
->VOIR ~/docs/STRUCTURE.md
+## 📖 À propos
+
+**SmartTools** est une boîte à outils tout-en-un conçue spécifiquement pour l'écosystème Samsung (One UI). Pensée pour être rapide, minimaliste et sans superflu publicitaire, l'application vous permet de **diagnostiquer**, **automatiser** et **optimiser** votre appareil en quelques clics.
 
 ---
 
-### 🚀 Objectifs du Projet
+## ✨ Fonctionnalités principales
 
-```md
-- [x] Fournir des outils simples et puissants pour Android & Samsung  
-- [x] Automatiser les diagnostics techniques  
-- [x] Centraliser la documentation professionnelle  
-- [x] Intégrer un serveur Webhooks multi‑plateforme  
-- [x] Offrir une base CI/CD universelle  
-- [x] Garantir une sécurité stricte et une structure propre  
-- [x] Permettre une extension rapide via modules  
-```
+### 🔍 1. Diagnostic de précision
+* **Santé de la batterie :** Cycles de charge réels, capacité résiduelle et température en temps réel.
+* **Test matériel :** Écran AMOLED (détection de brûlures / pixels morts), capteurs, micros, haut-parleurs et vibreur.
+* **Statut de sécurité :** Vérification de l'état Knox, SELinux et intégrité Play Protect.
 
----
+### ⚡ 2. Optimisation One UI
+* **Débloater sécurisé :** Désactivez facilement les applications préinstallées inutiles sans casser les fonctionnalités système.
+* **Gestion du cache & RAM :** Libération intelligente de la mémoire et gestion de la mise en veille profonde.
+* **Moniteur de performances :** Fréquence CPU/GPU et détection des surchauffes (*thermal throttling*).
 
-### 📚 Documentation
-Toute la documentation est centralisée dans /docs.
+### ⚙️ 3. Automatisation intelligente
+* **Routines personnalisées :** Basculez automatiquement vos paramètres (taux de rafraîchissement 60/120Hz, profils audio, mode avion) selon des déclencheurs précis.
+* **Protection de charge :** Alertes sonores et coupures virtuelles pour prolonger la durée de vie de la batterie.
 
->Contenu :
-###### - ARCHITECTURE.md — Architecture globale du projet  
-###### - SECURITY.md — Politique de sécurité renforcée  
-###### - STRUCTURE.md — Structure interne détaillée  
-###### - WEBHOOKS.md — Webhooks Discord / Telegram / Email  
-###### - MODULES.md — Description des modules Android / Samsung / System  
-###### - CHANGELOG.md — Historique des versions  
-###### - CODEOFCONDUCT.md — Règles de contribution
+### 🎨 4. Design & Légèreté
+* Interface fluide et épurée respectant les codes de design **One UI**.
+* Support natif du thème sombre dynamique (*Material You*).
+* Empreinte mémoire minimale (**< 15 Mo**), sans processus en arrière-plan intrusif.
 
 ---
 
-### 🔧 Modules Techniques
+## 📱 Prérequis
 
-### 📱 Android Tools
->Scripts pour diagnostics et analyse Android :
-```text
-   - [x] device-info.sh — Informations complètes de l’appareil  
-   - [x] battery-check.sh — Analyse batterie & santé  
-   - [x] network-scan.sh — Scan réseau & interfaces
-```
-
-### 📡 Samsung Tools
->Outils spécialisés Samsung :
-```text
-   - [x] oem-check.sh — Vérification OEM Unlock  
-   - [x] magisk-helper.sh — Aide à l’installation Magisk  
-   - [x] smart-diagnostics.sh — Diagnostic complet Samsung  
-```
-
-### 🖥️ System Tools
->Scripts système Linux :
-```md
-   - [x] cleanup.sh — Nettoyage intelligent  
-   - [x] sys-report.sh — Rapport système complet  
-   - [x] storage-map.sh — Cartographie du stockage  
-```
+* **Appareil :** Smartphone ou tablette Samsung Galaxy
+* **Système :** Android 10 (One UI 2.0) ou version ultérieure
+* *(Optionnel mais recommandé)* : [Shizuku](https://shizuku.rikka.app/) pour exécuter les optimisations avancées sans rooter le téléphone.
 
 ---
 
-### 🌐 Serveur Webhooks
->Serveur Node.js pour intégration externe :
-```markdown
-- [x] webhook-server.js — Serveur principal  
-- [x] discord.js — Envoi vers Discord  
-- [x] telegram.js — Envoi vers Telegram  
-- [x] email.js — Envoi email via SMTP  
-```
+## 🚀 Installation
 
-Fonctionne avec les fichiers de configuration **/config**.
+1. Rendez-vous sur la page des [**Releases**](../../releases).
+2. Téléchargez le dernier fichier `SmartTools-vX.X.X.apk`.
+3. Ouvrez le fichier sur votre appareil et autorisez l'installation depuis cette source.
+4. Lancez **SmartTools** et suivez l'assistant de configuration initial.
 
 ---
 
-### 🔒 Sécurité
-```md
-- [x] Secrets isolés dans /config  
-- [x] CI/CD avec scan de sécurité (security-scan.yml)  
-- [x] Aucun mot de passe dans le code  
-- [x] Scripts vérifiés manuellement  
-- [x] Architecture Zero‑Trust minimale  
-- [x] Webhooks sécurisés par tokens  
-```
+## 🛠️ Utilisation rapide
+
+1. **Diagnostic initial :** Rendez-vous dans l'onglet `Diagnostic` et lancez un *Scan rapide* pour évaluer la santé globale du téléphone.
+2. **Nettoyage :** Accédez à `Optimisation` > *Apps système* pour visualiser et geler les bloatwares recommandés.
+3. **Automatisations :** Activez vos premières règles dans la section `Routines` (ex: *Passage à 60 Hz en mode Économie*).
 
 ---
 
-### ⚙️ CI/CD
->Workflows GitHub Actions :
-```md
-   - [x] ci.yml — Build & tests  
-   - [x] deploy.yml — Déploiement automatique  
-   - [x] security-scan.yml — Analyse de sécurité  
-```
+## 🔒 Sécurité et Confidentialité
+
+* **100% Hors-ligne :** Aucune donnée personnelle, statistique ou télémétrie n'est envoyée vers des serveurs externes.
+* **Non destructif :** Les suppressions et modifications système sont réversibles en un clic.
 
 ---
 
-### 🤝 Contribution
->Templates disponibles :
-###### - [x] Bug Report  
-   ###### - [x] Feature Request  
-   ###### - [x] Security Issue  
-   ###### - [x] Pull Request Template  
-   ###### - [x] CODEOWNERS défini  
+## 🤝 Contribuer
+
+Les contributions, signalements de bugs et suggestions sont les bienvenus !
+
+1. Forkez le projet.
+2. Créez votre branche : `git checkout -b feature/NouvelleFonctionnalite`
+3. Commitez vos changements : `git commit -m 'Ajout de la fonctionnalité X'`
+4. Poussez sur la branche : `git push origin feature/NouvelleFonctionnalite`
+5. Ouvrez une **Pull Request**.
 
 ---
 
-### 📄 Licence
-Ce projet est distribué sous licence MIT (modifiable selon tes besoins).
+## 📄 Licence
 
----
-
-### 🧬 Vision SmartTools v2.0
-```md
-SmartTools vise à devenir une suite d’outils universelle, modulaire, sécurisée, capable de fonctionner sur :
-- Android  
-- Samsung  
-- Linux  
-- Serveurs externes  
-- Intégrations Discord / Telegram / Email
-```
-
----
+Ce projet est sous licence **MIT**. Consultez le fichier [LICENSE](LICENSE) pour plus d'informations.
