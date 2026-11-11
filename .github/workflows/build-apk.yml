@@ -1,0 +1,47 @@
+name: Android CI (Build APK)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+
+      - name: Configuration de Java (JDK 17)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Rendre gradlew exécutable
+        run: chmod +x gradlew || chmod +x app/gradlew || true
+
+      - name: Exécuter les tests unitaires
+        run: |
+          if [ -f "./gradlew" ]; then
+            ./gradlew testDebugUnitTest
+          else
+            cd app && ./gradlew testDebugUnitTest
+          fi
+
+      - name: Compiler l'APK Debug
+        run: |
+          if [ -f "./gradlew" ]; then
+            ./gradlew assembleDebug
+          else
+            cd app && ./gradlew assembleDebug
+          fi
+
+      - name: Téléverser l'APK en artefact GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartTools-Debug-APK
+          path: "**/build/outputs/apk/debug/*.apk"
