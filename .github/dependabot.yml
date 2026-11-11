@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # -------------------------------------------------------------
+  # 1. Dépendances Android / Kotlin via Gradle
+  # -------------------------------------------------------------
+  - package-ecosystem: "gradle"
+    # Si build.gradle.kts est à la racine de votre dépôt Git : directory: "/"
+    # Si le dépôt Git est au-dessus du dossier app/ : directory: "/app"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+    groups:
+      # Regroupe les dépendances AndroidX et Compose dans une seule PR
+      compose-and-androidx:
+        patterns:
+          - "androidx.*"
+          - "com.google.android.*"
+      # Regroupe les patchs et versions mineures pour éviter de multiplier les PRs
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # -------------------------------------------------------------
+  # 2. GitHub Actions (CI/CD pour compiler l'APK / exécuter les tests)
+  # -------------------------------------------------------------
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    open-pull-requests-limit: 5
