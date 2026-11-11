@@ -1,0 +1,75 @@
+# ==========================================
+# Fichiers de configuration locale & Secrets
+# ==========================================
+local.properties
+*.jks
+*.keystore
+signing.properties
+
+# Services & clés API privées (si ajoutées plus tard)
+google-services.json
+
+# ==========================================
+# Fichiers et dossiers Gradle
+# ==========================================
+.gradle/
+build/
+*/build/
+gradle-app.setting
+.gradletasknamecache
+
+# Conserver le wrapper Gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+# ==========================================
+# Android Studio / IntelliJ IDEA
+# ==========================================
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.navigation/
+captures/
+
+# Si vous souhaitez conserver la configuration du code-style dans git,
+# décommentez la ligne ci-dessous :
+# !.idea/codeStyles/
+
+# ==========================================
+# Fichiers de compilation Android (APK / AAB)
+# ==========================================
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# C/C++ / NDK (si utilisation de code natif pour One UI / Shizuku)
+.cxx/
+.externalNativeBuild/
+obj/
+libs/
+
+# ==========================================
+# Rapports et logs
+# ==========================================
+lint/
+lint-baseline.xml
+*.log
+
+# ==========================================
+# Système d'exploitation (OS)
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
