@@ -1,57 +1,72 @@
 package com.smarttools.samsung.ui.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import android.widget.Toast
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.smarttools.samsung.ui.components.OneUiCard
+import com.smarttools.samsung.ui.theme.OneUiBlue
+import com.smarttools.samsung.utils.SamsungSystemHelper
 
 @Composable
 fun OptimizationScreen() {
-    var isOptimized by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    var statusText by remember { mutableStateOf("Appareil prêt pour l'optimisation") }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(vertical = 12.dp)
     ) {
-        Text("Optimisation", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-
-        Card(
-            shape = RoundedCornerShape(24.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Column(modifier = Modifier.padding(20.dp)) {
-                Text("Nettoyage Système & Cache", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                Spacer(Modifier.height(8.dp))
-                Text(
-                    if (!isOptimized) "Analyse des résidus en arrière-plan prête." 
-                    else "Optimisation terminée avec succès ! Mémoire RAM libérée.",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-                Spacer(Modifier.height(16.dp))
-                Button(
-                    onClick = { isOptimized = true },
-                    shape = RoundedCornerShape(16.dp),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(if (!isOptimized) "Optimiser maintenant" else "Ré-analyser")
-                }
+        OneUiCard {
+            Text(
+                text = "Nettoyage Rapide de la RAM",
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(modifier = Modifier.height(6.dp))
+            Text(
+                text = "Ferme les processus en tâche de fond inactifs pour libérer la mémoire vive.",
+                fontSize = 14.sp
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(
+                onClick = {
+                    SamsungSystemHelper.clearRam(context)
+                    statusText = "Mémoire RAM libérée avec succès !"
+                    Toast.makeText(context, statusText, Toast.LENGTH_SHORT).show()
+                },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = OneUiBlue)
+            ) {
+                Text("Optimiser la Mémoire")
             }
         }
 
-        Card(
-            shape = RoundedCornerShape(24.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Column(modifier = Modifier.padding(20.dp)) {
-                Text("Débloater Samsung sécurisé", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                Spacer(Modifier.height(4.dp))
-                Text("Désactivez les services inutiles (ex: Bixby wakeup, Samsung Visit-In) via profil ADB/Shizuku.", style = MaterialTheme.typography.bodySmall)
-            }
+        OneUiCard {
+            Text(
+                text = "État Actuel",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+            Spacer(modifier = Modifier.height(6.dp))
+            Text(text = statusText)
         }
     }
 }
