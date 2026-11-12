@@ -42,6 +42,10 @@ SmartTools/
 ├── VERSION.md
 ├── CHANGELOG.md
 ├── ROADMAP.md
+├── .gitignore 
+├── .github/
+│   ├── workflows/
+│   ├── ISSUE_TEMPLATE/
 ├── app/
 │   ├── src/main/
 │   │   ├── AndroidManifest.xml
