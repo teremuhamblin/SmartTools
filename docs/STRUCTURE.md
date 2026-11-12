@@ -2,32 +2,44 @@
 - *Structure globale du projet, optimisée pour la clarté et la sécurité*.
 
 ### 📁 Structure du Projet
+- 》》 **v1.1.0**
 ```text
-app/
+SmartTools/
 ├── README.md
 ├── LICENSE
-├── .gitignore
+├── VERSION.md
+├── CHANGELOG.md
+├── ROADMAP.md
+├── .gitignore 
 ├── .github/
-├── src/main/
-│   ├── AndroidManifest.xml
-│   └── java/com/smarttools/samsung/
-│       ├── MainActivity.kt
-│       ├── data/
-│       │   └── DeviceSpecs.kt
-│       ├── ui/
-│       │   ├── theme/
-│       │   │   ├── Color.kt
-│       │   │   └── Theme.kt
-│       │   ├── screens/
-│       │   │   ├── DiagnosticScreen.kt
-│       │   │   ├── OptimizationScreen.kt
-│       │   │   └── AutomationScreen.kt
-│       │   └── components/
-│       │       └── OneUiCard.kt
-│       └── utils/
-│           ├── BatteryHelper.kt
-│           └── SamsungSystemHelper.kt
-└── build.gradle.kts (Module :app)
+│   ├── workflows/
+│   ├── ISSUE_TEMPLATE/
+├── app/
+│   ├── src/main/
+│   │   ├── AndroidManifest.xml
+│   │   └── java/com/smarttools/samsung/
+│   │       ├── MainActivity.kt
+│   │       ├── data/
+│   │       │   ├── DeviceSpecs.kt
+│   │       │   └── DiagnosticReport.kt          [Ajouté en v1.1.0]
+│   │       ├── ui/
+│   │       │   ├── theme/
+│   │       │   │   ├── Color.kt
+│   │       │   │   └── Theme.kt
+│   │       │   ├── screens/
+│   │       │   │   ├── DiagnosticScreen.kt
+│   │       │   │   ├── OptimizationScreen.kt
+│   │       │   │   └── AutomationScreen.kt
+│   │       │   └── components/
+│   │       │       ├── OneUiCard.kt
+│   │       │       └── ThermalGauge.kt          [Ajouté en v1.0.2]
+│   │       ├── service/
+│   │       │   └── QuickTileService.kt          [Ajouté en v1.1.0]
+│   │       └── utils/
+│   │           ├── BatteryHelper.kt
+│   │           ├── SamsungSystemHelper.kt
+│   │           └── PdfExporter.kt               [Ajouté en v1.1.0]
+│   └── build.gradle.kts
 ```
 
 ### 📌 Règles de structure
