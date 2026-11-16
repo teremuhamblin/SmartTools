@@ -12,10 +12,10 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Récupérer le code source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configuration de Java (JDK 17)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -34,7 +34,7 @@ jobs:
 
       - name: Récupérer les métadonnées Dependabot
         id: metadata
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
