@@ -83,3 +83,11 @@ fun openSamsungModesAndRoutines(context: Context): Boolean {
     context.startActivity(intent)
     return true
 }
+
+fun hasSPenSupport(context: Context): Boolean {
+    if (context.packageManager.hasSystemFeature("com.sec.feature.spen_usp")) return true
+    return android.view.InputDevice.getDeviceIds().any { id ->
+        val dev = android.view.InputDevice.getDevice(id) ?: return@any false
+        (dev.sources and android.view.InputDevice.SOURCE_STYLUS) == android.view.InputDevice.SOURCE_STYLUS
+    }
+}
