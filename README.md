@@ -16,7 +16,7 @@ Diagnostic matériel de précision, widget natif One UI, intégration **Modes et
 
 <!-- Badges Dynamiques GitHub -->
 [![Dernier Commit](https://img.shields.io/github/last-commit/teremuhamblin/SmartTools?style=for-the-badge&logo=git&logoColor=white&label=Dernier%20Commit&color=1E293B&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/commits)
-[![Issues](https://img.shields.io/github/issues/teremuhamblin/SmartTools?style=for-the-badge&logo=github&logoColor=white&label=Issues&color=DC2626&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/issues)
+[![Issues](https://img.shields.io/github/issues/teremuhamblin/SmartTools?style=for-the-badge&logo=github&logoColor=white&label=Issues&color=1E293B&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/issues)
 [![Licence](https://img.shields.io/github/license/teremuhamblin/SmartTools?style=for-the-badge&logo=opensourceinitiative&logoColor=white&label=Licence&color=1E293B&labelColor=1E293B)](LICENSE)
 
 <br/>
