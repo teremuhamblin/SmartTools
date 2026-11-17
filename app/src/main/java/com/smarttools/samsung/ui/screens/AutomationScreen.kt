@@ -114,3 +114,33 @@ fun openSamsungModesAndRoutines(context: Context): Boolean {
     context.startActivity(intent)
     return true
 }
+
+// À appeler dans AutomationScreen.kt :
+@Composable
+fun ModesAndRoutinesCard(
+    onOpenRoutines: () -> Unit,
+    onSendTestAlert: () -> Unit
+) {
+    OneUiCard(title = "Samsung Modes & Routines") {
+        Text(
+            text = "SmartTools expose 3 actions natives dans Modes et Routines " +
+                "(Diagnostic, Test S-Pen, Optimisation) via App Shortcuts.",
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = "💡 Recette : SI notification SmartTools contient \"Surchauffe\" → " +
+                "ALORS activer Économie d'énergie.",
+            style = MaterialTheme.typography.bodySmall
+        )
+        Spacer(Modifier.height(12.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Button(onClick = onOpenRoutines) {
+                Text("Ouvrir Modes & Routines")
+            }
+            OutlinedButton(onClick = onSendTestAlert) {
+                Text("Tester alerte")
+            }
+        }
+    }
+}
