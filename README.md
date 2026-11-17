@@ -9,15 +9,15 @@ Diagnostic matériel de précision, widget natif One UI, intégration **Modes et
 <br/>
 
 <!-- Badges Statut & Version -->
-![Version](https://img.shields.io/badge/Version-v1.2.0%20Stable-16A34A?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=1E293B)
-![Platform](https://img.shields.io/badge/Android-8.0%2B%20(API%2026%2B)-2563EB?style=for-the-badge&logo=android&logoColor=white&labelColor=1E293B)
-![One UI](https://img.shields.io/badge/One%20UI-4%20%C3%A0%207.x-1428A0?style=for-the-badge&logo=samsung&logoColor=white&labelColor=1E293B)
-![Target SDK](https://img.shields.io/badge/Target%20SDK-35%20(Android%2015)-0284C7?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=1E293B)
+![Version](https://img.shields.io/badge/Version-v1.2.0%20Stable-1E293B?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=1E293B)
+![Platform](https://img.shields.io/badge/Android-8.0%2B%20(API%2026%2B)-1E293B?style=for-the-badge&logo=android&logoColor=white&labelColor=1E293B)
+![One UI](https://img.shields.io/badge/One%20UI-4%20%C3%A0%207.x-1E293B?style=for-the-badge&logo=samsung&logoColor=white&labelColor=1E293B)
+![Target SDK](https://img.shields.io/badge/Target%20SDK-35%20(Android%2015)-1E293B?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=1E293B)
 
 <!-- Badges Dynamiques GitHub -->
-[![Dernier Commit](https://img.shields.io/github/last-commit/teremuhamblin/SmartTools?style=for-the-badge&logo=git&logoColor=white&label=Dernier%20Commit&color=16A34A&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/commits)
+[![Dernier Commit](https://img.shields.io/github/last-commit/teremuhamblin/SmartTools?style=for-the-badge&logo=git&logoColor=white&label=Dernier%20Commit&color=1E293B&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/commits)
 [![Issues](https://img.shields.io/github/issues/teremuhamblin/SmartTools?style=for-the-badge&logo=github&logoColor=white&label=Issues&color=DC2626&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/issues)
-[![Licence](https://img.shields.io/github/license/teremuhamblin/SmartTools?style=for-the-badge&logo=opensourceinitiative&logoColor=white&label=Licence&color=7C3AED&labelColor=1E293B)](LICENSE)
+[![Licence](https://img.shields.io/github/license/teremuhamblin/SmartTools?style=for-the-badge&logo=opensourceinitiative&logoColor=white&label=Licence&color=1E293B&labelColor=1E293B)](LICENSE)
 
 <br/>
 
