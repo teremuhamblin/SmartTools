@@ -105,3 +105,12 @@ fun AutomationScreen() {
         }
     }
 }
+
+// Dans SamsungSystemHelper.kt (ou AutomationScreen.kt)
+fun openSamsungModesAndRoutines(context: Context): Boolean {
+    val intent = context.packageManager.getLaunchIntentForPackage("com.samsung.android.app.routines")
+        ?: return false
+    intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(intent)
+    return true
+}
