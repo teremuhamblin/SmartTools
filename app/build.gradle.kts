@@ -13,7 +13,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 110
-        versionName = "1.1.0"
+        versionName = "1.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,3 +53,8 @@ dependencies {
 
     debugImplementation(libs.androidx.ui.tooling)
 }
+
+// Widget One UI (Jetpack Glance) & Planification économe
+implementation("androidx.glance:glance-appwidget:1.2.0")
+implementation("androidx.glance:glance-material3:1.2.0")
+implementation("androidx.work:work-runtime-ktx:2.12.0")
