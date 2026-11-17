@@ -1,0 +1,7 @@
+<string name="widget_smarttools_desc">Indicateur direct RAM, Batterie et Température One UI</string>
+<string name="shortcut_diag_short">Diagnostic</string>
+<string name="shortcut_diag_long">Lancer un diagnostic SmartTools</string>
+<string name="shortcut_touch_short">Test Écran</string>
+<string name="shortcut_touch_long">Tester dalle OLED, tactile et S-Pen</string>
+<string name="shortcut_opt_short">Optimisation</string>
+<string name="shortcut_opt_long">Ouvrir l\'optimisation RAM et batterie</string>
