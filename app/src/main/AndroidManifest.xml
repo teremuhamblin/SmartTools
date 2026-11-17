@@ -4,8 +4,24 @@
     <!-- Permissions requises pour la batterie et le matériel -->
     <uses-permission android:name="android.permission.BATTERY_STATS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+<!-- Permet à getLaunchIntentForPackage() de trouver Samsung Modes & Routines sur Android 11+ -->
+<queries>
+    <package android:name="com.samsung.android.app.routines" />
+</queries>
 
     <application
+        <receiver
+    android:name=".widget.SmartToolsWidgetReceiver"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+    </intent-filter>
+    <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/smart_tools_widget_info" />
+</receiver>
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="SmartTools"
@@ -13,7 +29,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartTools">
         <activity
-            android:name=".MainActivity"
+ <meta-data
+    android:name="android.app.shortcuts"
+    android:resource="@xml/shortcuts" />
+
+<intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:scheme="smarttools" android:host="route" />
+</intent-filter>
+        android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.SmartTools">
             <intent-filter>
