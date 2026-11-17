@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="quick_diagnostic"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:shortcutShortLabel="@string/shortcut_diag_short"
+        android:shortcutLongLabel="@string/shortcut_diag_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="smarttools://route/diagnostic"
+            android:targetPackage="com.smarttools.samsung"
+            android:targetClass="com.smarttools.samsung.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="touch_spen_test"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:shortcutShortLabel="@string/shortcut_touch_short"
+        android:shortcutLongLabel="@string/shortcut_touch_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="smarttools://route/touch_test"
+            android:targetPackage="com.smarttools.samsung"
+            android:targetClass="com.smarttools.samsung.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="open_optimization"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:shortcutShortLabel="@string/shortcut_opt_short"
+        android:shortcutLongLabel="@string/shortcut_opt_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="smarttools://route/optimization"
+            android:targetPackage="com.smarttools.samsung"
+            android:targetClass="com.smarttools.samsung.MainActivity" />
+    </shortcut>
+</shortcuts>
