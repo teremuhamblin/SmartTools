@@ -1,192 +1,66 @@
-# 📄 SmartTools
-### 📘 Guide d'Utilisation et d'Exécution
+# Guide d’utilisation et de développement
 
-Ce document détaille la mise en place, la compilation, l'utilisation pratique et l'extension du code source de la suite **SmartTools** pour smartphones Samsung Galaxy.
+Ce guide présente les parcours décrits pour SmartTools v1.2.1. Certaines informations matérielles et fonctions Samsung dépendent du modèle et de la version Android.
 
----
+## Prérequis
 
-## 📑 Sommaire
-1. [Prérequis & Environnement](#1-prérequis--environnement)
-2. [Compilation & Premier Déploiement](#2-compilation--premier-déploiement)
-3. [Guide des Fonctionnalités & Écrans](#3-guide-des-fonctionnalités--écrans)
-4. [Exemples de Code & Extension du Projet](#4-exemples-de-code--extension-du-projet)
-5. [Configuration Avancée (Shizuku & Débloat)](#5-configuration-avancée-shizuku--débloat)
-6. [Résolution des Problèmes Fréquents (FAQ)](#6-résolution-des-problèmes-fréquents-faq)
+- Un appareil Samsung Galaxy est recommandé pour les fonctions spécifiques à One UI.
+- Android 8.0 (API 26) ou ultérieur.
+- Pour compiler : Android Studio et un JDK compatible avec la configuration du projet (Java 17).
+- Pour les tests matériels : appareil physique compatible ; un émulateur ne reproduit pas toutes les capacités Samsung ou S-Pen.
 
----
+## Installer l’application
 
-## 1. Prérequis & Environnement
+1. Consultez la page [Releases](https://github.com/teremuhamblin/SmartTools/releases).
+2. Téléchargez l’APK s’il est disponible pour la version souhaitée.
+3. Vérifiez la version et la provenance de l’APK avant installation.
+4. Si Android le demande, autorisez l’installation depuis la source choisie.
 
-### Côté Machine de Développement
-* **IDE :** Android Studio (version Iguana, Jellyfish, Koala ou supérieure).
-* **JDK :** Java Development Kit **17** (obligatoire pour la cible Gradle configurée).
-* **Android SDK :** SDK Platform 35 installé via le SDK Manager.
+> La mise à jour des fichiers source vers v1.2.1 ne signifie pas, à elle seule, qu’un APK v1.2.1 a été compilé ou publié.
 
-### Côté Smartphone de Test
-* **Marque recommandée :** Smartphone ou tablette Samsung (One UI 2.0 à One UI 7.0 / Android 10 à Android 15).
-* **Options de développement activées :**
-  1. Rendez-vous dans *Paramètres* > *À propos du téléphone* > *Informations sur le logiciel*.
-  2. Tapotez 7 fois sur **Numéro de version** jusqu'à l'activation du mode développeur.
-  3. Dans *Paramètres* > *Options de développement*, activez le **Débogage USB**.
+## Parcours disponibles
 
-> ⚠️ **Note sur les émulateurs :**  
-> Les émulateurs AVD standards fonctionnent pour tester l'interface graphique (Compose), mais les fonctions spécifiques matérielles (`ro.boot.warranty_bit` pour Knox, température batterie précise, taux de rafraîchissement adaptatif) ne renverront des valeurs fiables que sur un terminal physique Samsung Galaxy.
+### Diagnostic
 
----
+Consultez les informations matérielles et système exposées par l’appareil. Les métriques disponibles et leur précision peuvent varier selon le fabricant, le modèle et la version Android.
 
-## 2. Compilation & Premier Déploiement
+### Widget d’accueil
 
-### Option A : Via Android Studio
-1. Ouvrez le dossier racine du projet dans Android Studio.
-2. Laissez Gradle synchroniser les dépendances (`Sync Project with Gradle Files`).
-3. Connectez votre terminal Samsung par câble USB ou Wi-Fi ADB.
-4. Sélectionnez l'appareil dans la liste déroulante en haut.
-5. Cliquez sur le bouton vert **Run 'app'** (`Shift + F10`).
+Ajoutez le widget SmartTools depuis le sélecteur de widgets de l’écran d’accueil. Les formats proposés et les données affichées dépendent de la configuration de l’appareil et du widget.
 
-### Option B : En Ligne de Commande (Terminal)
+### Test de l’écran et du S-Pen
 
-* **Générer l'APK de débogage (Debug) :**
-  ```bash
-  # Sur Linux / macOS
-  ./gradlew assembleDebug
+Lancez les mires d’affichage ou le test tactile depuis l’application. Les informations de stylet ne sont disponibles que sur du matériel compatible. Utilisez les mires à un niveau de luminosité raisonnable et quittez le test après inspection.
 
-  # Sur Windows (PowerShell / CMD)
-  .\gradlew.bat assembleDebug
-  ```
+### Modes et Routines
 
-  Le fichier APK généré se trouvera dans :  
-  `app/build/outputs/apk/debug/app-debug.apk`
+Les raccourcis de l’application peuvent être utilisés avec les intégrations Samsung disponibles sur l’appareil. La disponibilité dépend de l’installation et de la version de Modes et Routines.
 
-* **Installer directement sur l'appareil connecté :**
-  ```bash
-  ./gradlew installDebug
-  ```
+### Rapport PDF et tuile rapide
 
----
+L’export PDF et la tuile de réglages rapides sont accessibles depuis les parcours correspondants de l’application et Android.
 
-## 3. Guide des Fonctionnalités & Écrans
+## Compiler et tester
 
-L'application repose sur une barre de navigation inférieure à 3 onglets principaux :
-
-### 🔍 Onglet 1 : Diagnostic
-Cet écran permet de dresser un bilan de santé matériel immédiat :
-* **Identité Matérielle :** Modèle commercial, nom de code de la carte mère et processeur SoC.
-* **Audit Knox :**
-  * `0x0` : Le smartphone est certifié d'origine. Samsung Pay, Dossier Sécurisé et Samsung Pass sont fonctionnels.
-  * `0x1` : Le chargeur d'amorçage (bootloader) a été déverrouillé ou l'appareil a été rooté.
-* **Télémétrie Batterie :** Niveau précis au pourcent près, état de charge en direct, température (°C) et qualification de la santé chimique.
-
-### ⚡ Onglet 2 : Optimiser
-* **Nettoyage RAM / Cache :** En appuyant sur « Optimiser maintenant », l'application déclenche une purge des résidus temporaires en mémoire vive.
-* **Débloater :** Prépare le smartphone à isoler les applications préinstallées énergivores ou rarement utilisées (services Bixby superflus, traceurs publicitaires Samsung).
-
-### ⚙️ Onglet 3 : Routines
-* **Alerte Protection Batterie (85%) :** Évite de maintenir la batterie à 100% en continu pour réduire la dégradation chimique de l'accumulateur Li-ion.
-* **Passage automatique à 60 Hz :** Réduit la fréquence de l'écran AMOLED dès que l'autonomie passe sous un seuil critique afin d'économiser jusqu'à 20 % d'énergie supplémentaire.
-
----
-
-## 4. Exemples de Code & Extension du Projet
-
-Tous les composants créés sont modulaires et réutilisables.
-
-### Exemple 1 : Exploiter les métadonnées de DeviceSpecsProvider
-Pour afficher une nouvelle information (ex: résolution d'écran ou RAM disponible) dans un Composable :
-
-```kotlin
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
-import com.smarttools.samsung.data.DeviceSpecsProvider
-
-@Composable
-fun RamSummaryBadge() {
-    val context = LocalContext.current
-    // Récupération en mémoire mise en cache avec remember
-    val specs = remember { DeviceSpecsProvider.getDeviceSpecs(context) }
-
-    Text(
-        text = "RAM disponible : %.2f Go / %.2f Go".format(
-            specs.memory.availableRamGb,
-            specs.memory.totalRamGb
-        )
-    )
-}
-```
-
-### Exemple 2 : Créer une carte interactive avec OneUiCard
-Le composant `OneUiCard` s'adapte automatiquement au thème clair/sombre et offre une signature visuelle One UI :
-
-```kotlin
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Security
-import androidx.compose.material3.Switch
-import androidx.compose.material3.Text
-import androidx.compose.runtime.*
-import com.smarttools.samsung.ui.components.OneUiCard
-
-@Composable
-fun CustomSecurityCard() {
-    var isAuditActive by remember { mutableStateOf(true) }
-
-    OneUiCard(
-        title = "Protection Knox Active",
-        subtitle = "Surveillance du noyau en temps réel",
-        icon = Icons.Rounded.Security,
-        action = {
-            Switch(
-                checked = isAuditActive,
-                onCheckedChange = { isAuditActive = it }
-            )
-        },
-        onClick = {
-            // Action au clic sur la carte entière
-        }
-    ) {
-        Text("Tous les conteneurs sécurisés répondent normalement.")
-    }
-}
-```
-
----
-
-## 5. Configuration Avancée (Shizuku & Débloat)
-
-Pour effectuer des opérations système comme la désactivation d'applications préinstallées (débloat) sans rooter l'appareil, **SmartTools** s'associe à l'API **Shizuku**.
-
-### Étapes d'activation de Shizuku :
-1. Téléchargez l'application officielle **Shizuku** depuis Google Play ou GitHub.
-2. Activez le **Débogage sans fil** dans les *Options de développement* de votre Samsung Galaxy.
-3. Associez Shizuku via le code de jumelage à 6 chiffres.
-4. Lancez le service Shizuku.
-5. Lors d'une commande d'optimisation avancée dans SmartTools, acceptez la boîte de dialogue d'autorisation Shizuku.
-
-### Commandes ADB Manuelles Équivalentes :
-Si vous préférez exécuter les commandes depuis votre PC via câble USB :
+Depuis la racine du dépôt, si le wrapper Gradle y est présent :
 
 ```bash
-# Exemple : Désactiver le service vocal Bixby sans supprimer les fichiers système
-adb shell pm disable-user --user 0 com.samsung.android.bixby.agent
-
-# Pour restaurer l'application à tout moment :
-adb shell pm enable com.samsung.android.bixby.agent
+./gradlew test
+./gradlew assembleDebug
 ```
 
----
+Sous Windows :
 
-## 6. Résolution des Problèmes Fréquents (FAQ)
+```powershell
+.\gradlew.bat test
+.\gradlew.bat assembleDebug
+```
 
-* **Q1 : L'état Knox indique « Inconnu » ou « N/A » ?**  
-  * **Cause :** L'application s'exécute sur un émulateur standard Google AVD ou un smartphone d'une autre marque (Xiaomi, Pixel, etc.).  
-  * **Solution :** Testez l'APK sur un véritable terminal Samsung. La propriété `ro.boot.warranty_bit` n'existe que dans les firmwares One UI officiels.
+L’APK debug est généralement généré sous `app/build/outputs/apk/debug/`. Cette commande ne produit pas un APK signé pour distribution.
 
-* **Q2 : Erreur de compilation `Incompatible JVM target` ?**  
-  * **Cause :** Android Studio utilise une version de JDK différente de Java 17.  
-  * **Solution :** Rendez-vous dans :  
-    `File` > `Settings` (ou `Preferences` sur Mac) > `Build, Execution, Deployment` > `Build Tools` > `Gradle`  
-    Et vérifiez que **Gradle JDK** est bien configuré sur **JDK 17**.
+## Dépannage
 
-* **Q3 : Pourquoi l'application fait moins de 15 Mo ?**  
-  * **Explication :** Le fichier `build.gradle.kts` active `isMinifyEnabled = true` et `isShrinkResources = true` en mode Release. Cela supprime automatiquement les composants graphiques inutilisés et obfusque le code via ProGuard / R8.
-
+- **Une donnée est absente :** vérifiez la compatibilité du modèle et de la version Android ; certaines API ne sont pas exposées partout.
+- **Le widget n’apparaît pas :** vérifiez que l’application est installée et consultez le sélecteur de widgets de One UI.
+- **Le S-Pen n’est pas détecté :** confirmez que l’appareil et le stylet prennent en charge les événements concernés.
+- **La compilation échoue :** vérifiez le JDK configuré, la synchronisation Gradle et les journaux de build.
