@@ -1,44 +1,28 @@
-# Politique de Sécurité — SmartTools
+# Politique de sécurité SmartTools
 
-La sécurité et la protection de l'intégrité de votre smartphone sont au cœur de la conception de **SmartTools**. Étant donné que cette application interagit avec des paramètres système sensibles (via l'API Shizuku / ADB), nous appliquons une politique de tolérance zéro envers les vulnérabilités logicielles.
+La sécurité des données et la transparence des permissions sont importantes pour SmartTools. Les affirmations de confidentialité doivent être vérifiées à partir du code, du manifeste et des dépendances de la version concernée.
 
----
+## Versions
 
-## 🛡️ Versions supportées
+La version publiée la plus récente est la référence pour les signalements et les corrections. La disponibilité d’une version corrigée doit être confirmée dans la page [Releases](https://github.com/teremuhamblin/SmartTools/releases).
 
-Seule la dernière version publiée reçoit activement des correctifs de sécurité.
+## Signaler une vulnérabilité
 
-| Version | Prise en charge |
-| :--- | :--- |
-| **v1.0.x** |  **Oui** |
-| < v1.0.0 |  Non |
+Pour un problème de sécurité :
 
----
+1. **Ne publiez pas les détails dans une issue publique.**
+2. Si le signalement privé est activé pour ce dépôt, utilisez [GitHub Private Vulnerability Reporting](../../security/advisories/new).
+3. Sinon, contactez le mainteneur par un canal privé indiqué sur son profil GitHub.
+4. Fournissez une description, les étapes de reproduction, la version SmartTools et les versions Android/One UI concernées. Évitez d’inclure des données personnelles ou identifiants réels.
 
-## 🔒 Périmètre de Sécurité & Garanties
+## Périmètre d’examen
 
-SmartTools garantit par conception :
-* **Zéro Réseau :** L'absence totale de permissions réseau (`INTERNET`) dans le manifest garantit qu'aucune donnée de diagnostic, cycle batterie ou identifiant matériel ne peut quitter votre appareil.
-* **Non-Destruction :** Le débloater ne supprime pas de fichiers système en écriture (`/system` reste en lecture seule). Les actions passent par le gestionnaire de packages utilisateur (`pm disable-user`), permettant une réactivation immédiate.
-* **Isolation Shizuku :** Les commandes envoyées au daemon Shizuku sont sanitisées en amont pour prévenir toute injection de commande shell non désirée.
+Les signalements pertinents peuvent concerner notamment :
 
----
+- permissions Android et composants exportés ;
+- liens profonds et raccourcis ;
+- partage de rapports et configuration `FileProvider` ;
+- traitement des données locales ;
+- dépendances et chaîne de compilation.
 
-## 🚨 Signaler une Vulnérabilité
-
-Si vous découvrez une faille de sécurité (par exemple un risque de brique logicielle sur One UI, une vulnérabilité d'escalade de privilèges ou un bypass d'isolation) :
-
-1. **Ne créez PAS d'issue GitHub publique.**
-2. Utilisez la fonction [**GitHub Private Vulnerability Reporting**](../../security/advisories/new) intégrée à ce dépôt.
-3. À défaut, contactez directement le mainteneur via son adresse e-mail de sécurité présente sur son profil GitHub en précisant :
-   * La description précise de la vulnérabilité.
-   * Les étapes pour reproduire le problème.
-   * Le modèle d'appareil Samsung et la version de One UI testée.
-
----
-
-## ⏱️ Délai de réponse & Divulgation responsable
-
-* **Accusé de réception :** sous 48 heures.
-* **Analyse & Correctif :** un correctif prioritaire sera produit et testé avant toute publication.
-* **Divulgation publique :** une note de sécurité détaillée (*Security Advisory*) sera publiée sur GitHub en même temps que la mise à jour corrective (ex: v1.0.1) afin de protéger les utilisateurs déjà en possession de l'APK.
+N’envoyez pas de rapport PDF réel ou d’informations sensibles lors d’un signalement public. Le délai de réponse et la disponibilité d’un correctif ne sont pas garantis ; le mainteneur peut confirmer la réception et préciser les prochaines étapes.
