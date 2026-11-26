@@ -1,62 +1,42 @@
-###### **SmartTools v1.0.0** en respectant scrupuleusement ses piliers (absence totale de réseau, sécurité Knox/Shizuku, légèreté et design One UI).
+# Contribuer à SmartTools
 
----
+Merci de contribuer à SmartTools. Les corrections, améliorations de documentation, tests et propositions de fonctionnalités sont les bienvenus.
 
-### 1. `CONTRIBUTING.md`
-# Contribuer à SmartTools ⚡
+## Avant de commencer
 
-Merci de vous intéresser au développement de **SmartTools** ! Ce projet est un utilitaire open-source axé sur la confidentialité, la légèreté et la sécurité pour les appareils Samsung.
+- Pour un bug, ouvrez une issue en décrivant le modèle, la version Android/One UI et les étapes pour reproduire le problème.
+- Pour une évolution importante, proposez d’abord l’idée dans une issue afin d’en discuter.
+- Ne publiez pas d’informations personnelles, journaux sensibles ou données d’identification d’appareil.
 
-Toutes les contributions sont les bienvenues : corrections de bugs, nouvelles automatisations, optimisations de code ou améliorations de l'interface.
+## Développement
 
----
+1. Forkez le dépôt et créez une branche dédiée, par exemple `fix/widget-refresh` ou `docs/installation`.
+2. Gardez les changements ciblés et expliquez les choix importants.
+3. Ajoutez ou mettez à jour les tests lorsque le changement s’y prête.
+4. Lancez les vérifications disponibles :
 
-## 🛑 Règles d'or du projet
-
-Pour préserver l'ADN de SmartTools, toute Pull Request devra respecter ces règles sous peine de refus :
-
-1. **Aucun accès Internet :** La permission `android.permission.INTERNET` est formellement interdite dans le projet. Aucune bibliothèque de télémétrie, de crash report externe ou d'analytics ne sera acceptée.
-2. **Taille maîtrisée (< 15 Mo) :** Évitez l'ajout de dépendances lourdes. Privilégiez les APIs Android natives et le code compact.
-3. **Approche non destructrice :** Le module de débloat ne doit jamais supprimer physiquement de binaires système (uniquement gel/dégel via `pm disable-user` ou Shizuku).
-4. **Cohérence One UI :** L'UI doit respecter les codes de design de Samsung (espaces, placement des boutons sur la moitié inférieure de l'écran pour l'accessibilité à une main).
-
----
-
-## 🛠️ Configuration de l'environnement
-
-1. Installez **Android Studio** (dernière version stable recommandée).
-2. Clonez votre fork du dépôt :
    ```bash
-   git clone https://github.com/VOTRE_NOM/smarttools.git
-   cd smarttools
-   ```
-3. Ouvrez le projet dans Android Studio et synchronisez Gradle.
-4. Lancez le build de vérification :
-   ```bash
+   ./gradlew test
    ./gradlew assembleDebug
    ```
 
----
+5. Ouvrez une Pull Request décrivant le problème, la solution et les vérifications effectuées.
 
-## 🌿 Workflow Git & Branches
+## Principes de contribution
 
-1. Créez une branche thématique depuis `main` :
-   * Nouvelle fonctionnalité : `feature/nom-de-la-feature`
-   * Correction de bug : `fix/description-du-bug`
-   * Optimisation : `perf/optimisation-concernee`
-2. Adoptez des messages de commit clairs ([Conventional Commits](https://www.conventionalcommits.org/)) :
-   * `feat(diagnostic): ajout du test du capteur de proximité`
-   * `fix(debloater): protection contre la désactivation de com.android.phone`
-   * `docs: mise à jour du guide Shizuku`
-3. Poussez votre branche et ouvrez une **Pull Request** détaillée avec des captures d'écran si l'interface graphique a été modifiée.
+- Demandez uniquement les permissions nécessaires et expliquez leur usage.
+- Évitez les dépendances sans nécessité claire.
+- N’affirmez pas une compatibilité ou une garantie de confidentialité sans vérification dans le manifeste et le code.
+- Pour toute évolution du partage de fichiers, vérifiez `FileProvider` et `res/xml/file_paths.xml`.
+- Pour les changements d’interface, fournissez si possible une capture d’écran et indiquez l’appareil testé.
+- Ne commitez ni clés de signature, ni fichiers locaux, ni données personnelles.
 
----
+## Messages de commit
 
-## 🧪 Tests recommandés
+Des messages concis et descriptifs sont recommandés, par exemple :
 
-Avant de soumettre votre PR :
-* Vérifiez que le linting Android passe sans erreur critique :
-  ```bash
-  ./gradlew lint
-  ```
-* Testez si possible sur un appareil Samsung physique sous One UI (avec et sans Shizuku)
+- `fix(widget): corrige le rafraîchissement`
+- `docs: clarifie les prérequis Android`
+- `test(report): ajoute un cas de validation`
+
+Les Pull Requests sont examinées avant intégration ; l’ouverture d’une PR ne garantit pas son acceptation.
