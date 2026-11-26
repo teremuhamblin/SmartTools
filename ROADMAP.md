@@ -10,9 +10,9 @@
 ## Maintenance : v1.2.1
 
 - [x] Harmoniser la version Android (`versionName` 1.2.1, `versionCode` 111) et les documents du dépôt.
-- [ ] Exécuter `./gradlew test` et compiler l’APK release.
-- [ ] Vérifier l’APK sur appareils Galaxy pris en charge avant diffusion.
-- [ ] Publier l’APK et les notes de version dans GitHub Releases après validation.
+- [x] Exécuter `./gradlew test` et compiler l’APK release.
+- [o] Vérifier l’APK sur appareils Galaxy pris en charge avant diffusion.
+- [o] Publier l’APK et les notes de version dans GitHub Releases après validation.
 
 ## Prochaines étapes
 
