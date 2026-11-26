@@ -1,38 +1,67 @@
 <a id="top"></a>
+
 <div align="center">
 
 # ⚡ SmartTools
-### La boîte à outils Android moderne, légère et conçue sur mesure pour Samsung Galaxy (One UI)
 
-Diagnostic matériel de précision, widget natif One UI, intégration **Modes et Routines** et test interactif **OLED / Tactile / S-Pen** — sans publicité ni tracking.
+### **L’essentiel du diagnostic Galaxy, dans une interface pensée pour One UI.**
 
-<br/>
+Une boîte à outils Android moderne pour **comprendre**, **tester** et **piloter** votre Samsung Galaxy — du diagnostic matériel au widget, en passant par les tests OLED, tactiles et S-Pen.
 
-<!-- Badges Statut & Version -->
-![Version](https://img.shields.io/badge/Version-v1.2.0%20Stable-1E293B?style=for-the-badge&logo=semanticrelease&logoColor=white&labelColor=1E293B)
-![Platform](https://img.shields.io/badge/Android-8.0%2B%20(API%2026%2B)-1E293B?style=for-the-badge&logo=android&logoColor=white&labelColor=1E293B)
-![One UI](https://img.shields.io/badge/One%20UI-4%20%C3%A0%207.x-1E293B?style=for-the-badge&logo=samsung&logoColor=white&labelColor=1E293B)
-![Target SDK](https://img.shields.io/badge/Target%20SDK-35%20(Android%2015)-1E293B?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=1E293B)
-
-<!-- Badges Dynamiques GitHub -->
-[![Dernier Commit](https://img.shields.io/github/last-commit/teremuhamblin/SmartTools?style=for-the-badge&logo=git&logoColor=white&label=Dernier%20Commit&color=1E293B&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/commits)
-[![Issues](https://img.shields.io/github/issues/teremuhamblin/SmartTools?style=for-the-badge&logo=github&logoColor=white&label=Issues&color=1E293B&labelColor=1E293B)](https://github.com/teremuhamblin/SmartTools/issues)
-[![Licence](https://img.shields.io/github/license/teremuhamblin/SmartTools?style=for-the-badge&logo=opensourceinitiative&logoColor=white&label=Licence&color=1E293B&labelColor=1E293B)](LICENSE)
+**Open source · Sans publicité · Sans télémétrie · Conçue pour Samsung Galaxy**
 
 <br/>
 
-[🚀 Nouveautés v1.2.0](#nouveautes) • [✨ Fonctionnalités](#fonctionnalites) • [🏗️ Architecture](#architecture) • [📜 Historique](#historique) • [📲 Installation](#installation) • [🔒 Sécurité](#securite) • [🤝 Contribuer](#contribuer)
+[![Version](https://img.shields.io/badge/version-1.2.0-2563EB?style=for-the-badge&logo=semanticrelease&logoColor=white)](https://github.com/teremuhamblin/SmartTools/releases)
+[![Android](https://img.shields.io/badge/Android-8.0%2B-2563EB?style=for-the-badge&logo=android&logoColor=white)](#compatibilite)
+[![One UI](https://img.shields.io/badge/One%20UI-4.x--7.x-2563EB?style=for-the-badge&logo=samsung&logoColor=white)](#compatibilite)
+[![Target SDK](https://img.shields.io/badge/Target%20SDK-35-2563EB?style=for-the-badge&logo=android&logoColor=white)](#architecture)
+
+[![Dernier commit](https://img.shields.io/github/last-commit/teremuhamblin/SmartTools?style=for-the-badge&logo=git&logoColor=white&color=2563EB)](https://github.com/teremuhamblin/SmartTools/commits/main)
+[![Issues ouvertes](https://img.shields.io/github/issues/teremuhamblin/SmartTools?style=for-the-badge&logo=github&logoColor=white&color=DC2626)](https://github.com/teremuhamblin/SmartTools/issues)
+[![Licence MIT](https://img.shields.io/github/license/teremuhamblin/SmartTools?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=DC2626)](LICENSE)
+
+<br/>
+
+[**Découvrir les nouveautés**](#nouveautes) · [**Fonctionnalités**](#fonctionnalites) · [**Architecture**](#architecture) · [**Installation**](#installation) · [**Sécurité**](#securite) · [**Contribuer**](#contribuer)
 
 </div>
+
+---
+
+> **Identité visuelle du projet** — une esthétique inspirée des interfaces IA modernes : surfaces sobres, contrastes nets, accents **bleu électrique** pour la technologie et **rouge** pour les alertes et la sécurité. La typographie suit celle de GitHub : les dépôts n’autorisent pas l’intégration fiable de polices personnalisées dans leur rendu Markdown.
+
+## Sommaire
+
+- [À propos](#apropos)
+- [Nouveautés de la v1.2.0](#nouveautes)
+- [Fonctionnalités principales](#fonctionnalites)
+- [Architecture](#architecture)
+- [Historique des versions](#historique)
+- [Compatibilité](#compatibilite)
+- [Installation](#installation)
+- [Confidentialité et sécurité](#securite)
+- [Contribuer](#contribuer)
+- [Licence](#licence)
 
 ---
 
 <a id="apropos"></a>
 ## 📖 À propos
 
-**SmartTools** est une application open-source développée en **Kotlin**, **Jetpack Compose** et **Jetpack Glance**, dédiée aux smartphones, tablettes et modèles pliables **Samsung Galaxy**.
+**SmartTools** est une application Android open source développée en **Kotlin**, **Jetpack Compose** et **Jetpack Glance**, dédiée aux smartphones, tablettes et appareils pliables **Samsung Galaxy**.
 
-Sans publicité, sans télémétrie et sans service invasif en arrière-plan, elle adopte les codes esthétiques de **One UI** pour **diagnostiquer**, **optimiser** et **automatiser** votre appareil au quotidien.
+Elle réunit dans une seule expérience les informations utiles sur l’appareil, des outils de test matériel, des raccourcis d’optimisation et des intégrations à l’écosystème **One UI**. L’interface est conçue pour être lisible, adaptée aux formats Galaxy et cohérente avec les usages Samsung.
+
+### En un coup d’œil
+
+| | Ce que SmartTools apporte |
+|:--|:--|
+| **Diagnostiquer** | Informations appareil, mémoire, batterie et état thermique. |
+| **Tester** | Outils interactifs pour l’écran OLED, le tactile et le S-Pen compatible. |
+| **Consulter** | Widget d’accueil et tuile de réglages rapides pour accéder aux indicateurs. |
+| **Automatiser** | Raccourcis et alertes utilisables avec Samsung Modes et Routines. |
+| **Partager** | Rapport de diagnostic exportable au format PDF. |
 
 ---
 
@@ -40,94 +69,152 @@ Sans publicité, sans télémétrie et sans service invasif en arrière-plan, el
 ## 🚀 Nouveautés de la v1.2.0
 
 > [!IMPORTANT]
-> La **v1.2.0** renforce l'intégration native à l'écosystème Samsung One UI avec 3 nouveaux modules majeurs et une architecture unifiée.
+> La v1.2.0 rassemble le widget d’accueil, les intégrations Modes et Routines et les tests interactifs d’écran et de S-Pen autour d’une lecture système partagée.
 
-* 📊 **Widget écran d'accueil One UI (`SmartToolsWidget`) :**
-  * Développé avec **Jetpack Glance (`1.2.0`)**, coins arrondis `24dp` et **Dynamic Color** (thème clair/sombre automatique).
-  * Formats responsives **`2×1` (compact)** et **`4×1` (détaillé)** affichant RAM utilisée, Mo libres, batterie, température °C et statut thermique.
-  * Bouton d'actualisation instantanée **`↻`** + planification économe via **`WorkManager`** (active *uniquement* si un widget est placé sur l'écran d'accueil).
-* ⚙️ **Intégration Samsung *Modes et Routines* (ex-Bixby Routines) :**
-  * **3 App Shortcuts natifs** (`shortcuts.xml`) directement appelables dans vos routines (*Diagnostic rapide*, *Test Écran/S-Pen*, *Optimisation*).
-  * **Deep Links** (`smarttools://route/...`) et **canaux d'alertes déclencheurs** (`RoutineNotifier` : surchauffe batterie / RAM critique) pour déclencher des actions One UI automatiques.
-* ✍️ **Module de test interactif Écran OLED, Tactile & Numériseur S-Pen :**
-  * **Mires OLED & Burn-in :** plein écran immersif autour du poinçon caméra (`CUTOUT_MODE_SHORT_EDGES`), luminosité temporaire à `100 %` restaurée à la sortie, cycle de 6 couleurs (RVB, Blanc, Noir OLED, Gris 50 %).
-  * **Matrice Tactile (`10×20`) :** suivi multi-touch à **120/240 Hz** (`getHistoricalX/Y`) avec blocage du geste *Retour* latéral One UI (`setSystemGestureExclusionRects`).
-  * **Télémétrie S-Pen (Wacom EMR) :** rejet de paume natif (`TOOL_TYPE_STYLUS` / `TOOL_TYPE_ERASER`), pression, inclinaison (`AXIS_TILT`), survol *Air View* (`OnHoverListener`) et bouton latéral.
-* 📄 **Rapports & Tuile Rapide enrichis :**
-  * Intégration des résultats **Écran & S-Pen** dans `DiagnosticReport` et l'export **`PdfExporter`**.
-  * Sous-titre dynamique (RAM % & Température) sur la tuile **`QuickTileService`** via le lecteur unifié `SystemSnapshotReader`.
+### 📊 Widget One UI
+
+- Widget développé avec **Jetpack Glance**, disponible en formats **2×1** compact et **4×1** détaillé.
+- Affichage des informations de mémoire, batterie et température disponibles dans l’application.
+- Actualisation à la demande et mises à jour planifiées via **WorkManager** lorsque le widget est utilisé.
+- Prise en charge du thème clair ou sombre et des couleurs dynamiques.
+
+### ⚙️ Samsung Modes et Routines
+
+- Trois **App Shortcuts** : diagnostic rapide, test écran/S-Pen et optimisation.
+- Raccourcis profonds `smarttools://route/...` pour ouvrir les parcours concernés.
+- Canaux d’alerte dédiés aux événements suivis, notamment température élevée et mémoire critique.
+
+### ✍️ Tests OLED, tactile et S-Pen
+
+- Mires plein écran pour examiner l’affichage et repérer d’éventuelles irrégularités visibles.
+- Test tactile multi-touch avec visualisation sur une matrice **10×20**.
+- Informations du stylet lorsqu’un S-Pen compatible est détecté : type d’outil, pression, inclinaison, survol et bouton latéral.
+- Restauration des paramètres temporaires de luminosité à la sortie du test.
+
+### 📄 Rapports et réglages rapides
+
+Les résultats disponibles sont intégrés au modèle `DiagnosticReport` et à l’export PDF. La tuile `QuickTileService` exploite également le snapshot système partagé pour afficher un sous-titre contextualisé.
 
 ---
 
 <a id="fonctionnalites"></a>
 ## ✨ Fonctionnalités principales
 
-| Pôle | Capacités clés |
-| :--- | :--- |
-| 🔍 **Diagnostic matériel** | Télémétrie batterie + jauge thermique (`ThermalGauge` & `PowerManager` API 29+), modèle, CPU, Android/One UI, bit **Samsung Knox** (`0x0` / `0x1`), RAM/stockage, test **OLED / Tactile / S-Pen** et export **PDF** |
-| 📊 **Widget One UI** | Indicateur temps réel RAM, batterie & température sur l'écran d'accueil (`2×1` / `4×1`), rafraîchissement à la demande, zéro surconsommation |
-| ⚡ **Optimisation rapide** | Libération mémoire ciblée, gestion du cache et **Tuile Quick Settings** One-Tap dans le volet de raccourcis One UI |
-| ⚙️ **Automatisation & Routines** | Seuils batterie (80 % / 85 %), Mode Nuit Éco (23h–07h), Profil Jeu, **App Shortcuts** & alertes **Samsung Modes et Routines** |
-| 🎨 **Design One UI & Multilingue** | Cartes `OneUiCard` (`26dp`), thème **Pure AMOLED Black (`#000000`)**, adaptatif Galaxy S / Z Flip / Z Fold / Tab, interface **FR / EN / ES** |
+| Domaine | Fonctionnalités |
+|:--|:--|
+| 🔍 **Diagnostic matériel** | Informations sur l’appareil, Android/One UI, processeur, mémoire, stockage et batterie ; jauge thermique selon la version Android ; lecture de l’état Knox lorsque disponible. |
+| 📊 **Widget One UI** | Indicateurs de mémoire, batterie et température ; formats `2×1` et `4×1` ; actualisation manuelle et planifiée. |
+| 🖊️ **Test de l’écran** | Mires OLED, test multi-touch, prise en charge des événements S-Pen et retour visuel interactif. |
+| ⚡ **Accès rapide** | Tuile Quick Settings et outils d’optimisation accessibles depuis l’application. |
+| ⚙️ **Automatisation** | Seuils et profils présentés dans l’application, raccourcis d’applications et intégration à Samsung Modes et Routines. |
+| 📄 **Rapport** | Export PDF des informations et résultats de diagnostic pris en charge. |
+| 🎨 **Expérience Galaxy** | Interface Jetpack Compose, cartes One UI, thème AMOLED noir et traductions française, anglaise et espagnole. |
 
 ---
 
 <a id="architecture"></a>
-## 🏗️ Architecture du projet
+## 🏗️ Architecture
+
+SmartTools s’appuie sur un **lecteur de snapshot système commun** afin de partager les indicateurs entre les écrans, le widget et la tuile rapide. Les composants d’interface délèguent les tâches dédiées aux utilitaires, aux services Android et aux intégrations One UI.
 
 ```mermaid
-flowchart TB
-    UI["Écrans Compose<br/>(Diagnostic, Optimisation, Automatisation, TouchTest)"] --> SNAP["SystemSnapshotReader<br/>(RAM, Batterie, Thermique)"]
-    UI --> SYS["SamsungSystemHelper<br/>(Knox, One UI, S-Pen)"]
-    UI --> PDF["PdfExporter + FileProvider<br/>(Export sécurisé reports/)"]
-    WDG["SmartToolsWidget (Glance)<br/>+ WidgetUpdateWorker"] --> SNAP
-    TILE["QuickTileService"] --> SNAP
-    RT["Samsung Modes & Routines<br/>(shortcuts.xml & Deep Links)"] --> UI
-    NOTIF["RoutineNotifier<br/>(Canaux d'alerte)"] --> RT
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#DBEAFE","primaryTextColor":"#0F172A","primaryBorderColor":"#2563EB","lineColor":"#64748B","secondaryColor":"#FEE2E2","tertiaryColor":"#EFF6FF","fontFamily":"Arial"}}}%%
+flowchart LR
+    subgraph UX[Expérience SmartTools]
+        UI[Écrans Compose]
+        W[Widget Glance]
+        T[Tuile Quick Settings]
+    end
+
+    subgraph CORE[Services partagés]
+        SNAP[SystemSnapshotReader]
+        SYS[SamsungSystemHelper]
+        REPORT[DiagnosticReport]
+    end
+
+    subgraph ANDROID[Android et One UI]
+        WM[WorkManager]
+        ROUTINES[Modes et Routines]
+        PDF[PdfExporter + FileProvider]
+    end
+
+    UI --> SNAP
+    UI --> SYS
+    UI --> REPORT
+    W --> SNAP
+    T --> SNAP
+    W --> WM
+    UI <--> ROUTINES
+    REPORT --> PDF
+
+    classDef blue fill:#DBEAFE,stroke:#2563EB,color:#0F172A,stroke-width:2px
+    classDef red fill:#FEE2E2,stroke:#DC2626,color:#0F172A,stroke-width:2px
+    class UI,W,T,SNAP,SYS,REPORT blue
+    class WM,ROUTINES,PDF red
+```
+
+### Parcours des données
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#EFF6FF","primaryTextColor":"#0F172A","primaryBorderColor":"#2563EB","lineColor":"#DC2626","fontFamily":"Arial"}}}%%
+sequenceDiagram
+    autonumber
+    actor User as Utilisateur
+    participant UI as Écran / widget / tuile
+    participant Reader as SystemSnapshotReader
+    participant Android as API Android / Samsung
+
+    User->>UI: Ouvre un diagnostic ou actualise
+    UI->>Reader: Demande un snapshot
+    Reader->>Android: Lit les données système accessibles
+    Android-->>Reader: Valeurs disponibles sur l’appareil
+    Reader-->>UI: Snapshot formaté
+    UI-->>User: Indicateurs et résultats
 ```
 
 <details>
-<summary><b>📂 Explorer l'arborescence complète de <code>app/src/</code> (cliquer pour déplier)</b></summary>
+<summary><strong>📂 Arborescence principale de <code>app/src/</code></strong></summary>
 
 ```text
 app/src/
 ├── main/
 │   ├── AndroidManifest.xml
 │   ├── java/com/smarttools/samsung/
-│   │   ├── MainActivity.kt                  # Navigation & routage Deep Links
+│   │   ├── MainActivity.kt
 │   │   ├── data/
-│   │   │   ├── DeviceSpecs.kt               # Spécifications appareil & S-Pen
-│   │   │   └── DiagnosticReport.kt          # Modèle complet (+ résultats écran/S-Pen)
+│   │   │   ├── DeviceSpecs.kt
+│   │   │   └── DiagnosticReport.kt
 │   │   ├── service/
-│   │   │   └── QuickTileService.kt          # Tuile Réglages Rapides One UI
+│   │   │   └── QuickTileService.kt
 │   │   ├── widget/
-│   │   │   ├── SmartToolsWidget.kt          # Widget Glance 2×1 & 4×1
-│   │   │   ├── SmartToolsWidgetReceiver.kt  # Cycle de vie widget (onEnabled/onDisabled)
-│   │   │   └── WidgetUpdateWorker.kt        # Planification WorkManager (15 min)
+│   │   │   ├── SmartToolsWidget.kt
+│   │   │   ├── SmartToolsWidgetReceiver.kt
+│   │   │   └── WidgetUpdateWorker.kt
 │   │   ├── theme/
-│   │   │   ├── Color.kt & Theme.kt          # Thème One UI & Pure AMOLED Black
+│   │   │   ├── Color.kt
+│   │   │   └── Theme.kt
 │   │   ├── ui/
 │   │   │   ├── components/
 │   │   │   │   ├── OneUiCard.kt
 │   │   │   │   ├── ThermalGauge.kt
-│   │   │   │   └── TouchMatrixView.kt       # Canvas 120/240 Hz tactile & S-Pen
+│   │   │   │   └── TouchMatrixView.kt
 │   │   │   └── screens/
-│   │   │       ├── AutomationScreen.kt      # Profils & hub Modes et Routines
-│   │   │       ├── DiagnosticScreen.kt      # Télémétrie & lancement tests
-│   │   │       ├── OptimizationScreen.kt    # Nettoyage RAM & cache
-│   │   │       └── TouchTestScreen.kt       # Mode immersif OLED / Tactile / S-Pen
+│   │   │       ├── AutomationScreen.kt
+│   │   │       ├── DiagnosticScreen.kt
+│   │   │       ├── OptimizationScreen.kt
+│   │   │       └── TouchTestScreen.kt
 │   │   └── utils/
 │   │       ├── BatteryHelper.kt
 │   │       ├── PdfExporter.kt
-│   │       ├── QuickSystemSnapshot.kt       # Snapshot unifié RAM / Batterie / Thermique
-│   │       ├── RoutineNotifier.kt           # Notifications déclencheurs Routines
+│   │       ├── QuickSystemSnapshot.kt
+│   │       ├── RoutineNotifier.kt
 │   │       └── SamsungSystemHelper.kt
 │   └── res/xml/
-│       ├── file_paths.xml                   # FileProvider restreint à reports/
-│       ├── shortcuts.xml                    # App Shortcuts Modes & Routines
-│       └── smart_tools_widget_info.xml      # Configuration taille/arrondis Widget
+│       ├── file_paths.xml
+│       ├── shortcuts.xml
+│       └── smart_tools_widget_info.xml
 └── test/java/com/smarttools/samsung/
-    └── DiagnosticReportTest.kt              # Tests unitaires
+    └── DiagnosticReportTest.kt
 ```
 
 </details>
@@ -135,49 +222,56 @@ app/src/
 ---
 
 <a id="historique"></a>
-## 📜 Historique des versions (`v1.0.0` → `v1.2.0`)
+## 📜 Historique des versions
 
-| Version | Date | Résumé des modifications |
-| :---: | :---: | :--- |
-| **v1.2.0** | Nov 2026 | **Écosystème One UI & Diagnostics avancés** : Widget écran d'accueil **Jetpack Glance** (`2×1`/`4×1` + `WorkManager`), intégration native **Samsung Modes & Routines** (`shortcuts.xml`, Deep Links, `RoutineNotifier`), module interactif **OLED / Matrice Tactile 120–240 Hz / Numériseur S-Pen**, `SystemSnapshotReader` unifié, export PDF enrichi et tests unitaires (`DiagnosticReportTest`). |
-| **v1.1.0** | Fév 2025 | **Majeure Mineure** : Export de rapport PDF (`PdfExporter`), tuile Quick Settings (`QuickTileService`), moteur de règles d'automatisation, support multilingue (FR/EN/ES) et alignement visuel One UI 6.1/7.0. |
-| **v1.0.3** | Jan 2025 | **Protection & SDK 35** : Alerte de charge programmable à 80 %/85 %, indicateurs circulaires dans l'optimisation, Android 15 (Target SDK 35) et précision accrue des cycles batterie. |
-| **v1.0.2** | Déc 2024 | **Matériel & AMOLED** : Vérification du bit Knox (`0x0`/`0x1`), jauge thermique temps réel (`ThermalGauge`), mode Pure AMOLED Black et correctif Galaxy Z Flip. |
-| **v1.0.1** | Déc 2024 | **Stabilisation & Formats** : Rétrocompatibilité Android 8–10, permissions Android 13/14 (`POST_NOTIFICATIONS`), correctif calcul RAM et paddings adaptatifs Fold/Tab. |
-| **v1.0.0** | Nov 2024 | **Sortie Initiale** : Socle Jetpack Compose One UI (`OneUiCard`), écrans Diagnostic, Optimisation et Automatisation, utilitaires `BatteryHelper` et `SamsungSystemHelper`. |
+| Version | Date | Points forts |
+|:--:|:--:|:--|
+| **v1.2.0** | Nov. 2026 | Widget Jetpack Glance, intégration Modes et Routines, test OLED/tactile/S-Pen et enrichissement des rapports. |
+| **v1.1.0** | Fév. 2025 | Export PDF, tuile Quick Settings, automatisations et langues FR/EN/ES. |
+| **v1.0.3** | Jan. 2025 | Alertes de charge, indicateurs d’optimisation et cible Android 15 (SDK 35). |
+| **v1.0.2** | Déc. 2024 | État Knox, jauge thermique, thème AMOLED et améliorations Galaxy Z Flip. |
+| **v1.0.1** | Déc. 2024 | Compatibilité Android 8–10, permissions de notification et adaptations d’affichage. |
+| **v1.0.0** | Nov. 2024 | Première version : écrans Diagnostic, Optimisation et Automatisation. |
 
 ---
 
 <a id="compatibilite"></a>
-## 📱 Prérequis de compatibilité
+## 📱 Compatibilité
 
-* **Appareils cibles :** Smartphones, pliables (Z Flip / Z Fold) et tablettes (Tab S avec S-Pen) **Samsung Galaxy**
-* **Version minimale d'Android :** Android 8.0 (API 26 — Oreo)
-* **Version recommandée :** Android 14 / Android 15 (**One UI 4.0 à One UI 7.x**)
+- **Appareils ciblés :** smartphones Samsung Galaxy, Galaxy Z Flip, Galaxy Z Fold et tablettes Galaxy Tab.
+- **Android minimum :** Android 8.0 (**API 26**).
+- **Versions One UI visées :** One UI 4.x à 7.x.
+- **S-Pen :** les fonctions dépendent de la compatibilité matérielle de l’appareil et du stylet.
+
+La disponibilité et la précision de certaines données système peuvent varier selon le modèle, la version Android et les API exposées par le fabricant.
 
 ---
 
 <a id="installation"></a>
-## 📲 Installation & Prise en main rapide
+## 📲 Installation
 
-1. Rendez-vous dans la section [**Releases**](https://github.com/teremuhamblin/SmartTools/releases).
-2. Téléchargez le dernier APK **`SmartTools-v1.2.0.apk`** et installez-le sur votre Galaxy.
-3. **Ajoutez le Widget One UI :** appui long sur l'écran d'accueil ➔ *Widgets* ➔ *SmartTools* (`2×1` ou `4×1`).
-4. **Configurez vos Routines :** ouvrez *Automatisation* ➔ *Ouvrir Modes & Routines* pour associer vos déclencheurs et actions SmartTools.
-5. **Testez votre dalle & S-Pen :** rendez-vous dans *Diagnostic* ➔ *Test Écran OLED, Tactile & S-Pen* avant d'exporter votre **rapport PDF** complet !
+### Installer une version publiée
+
+1. Ouvrez la page [**Releases**](https://github.com/teremuhamblin/SmartTools/releases).
+2. Téléchargez l’APK de la version souhaitée et installez-le sur votre Galaxy.
+3. Pour ajouter le widget : appui long sur l’écran d’accueil → **Widgets** → **SmartTools**.
+4. Pour utiliser les intégrations, ouvrez **Automatisation** et consultez les raccourcis Modes et Routines disponibles.
+
+> **Conseil :** installez les APK uniquement depuis une source de confiance et vérifiez les informations de version publiées dans les Releases.
 
 <details>
-<summary><b>🛠️ Compiler depuis les sources & exécuter les tests (Développeurs)</b></summary>
+<summary><strong>🛠️ Compiler le projet et lancer les tests</strong></summary>
+
+Prérequis : un environnement Android compatible avec le projet et un JDK configuré.
 
 ```bash
-# Cloner le dépôt
 git clone https://github.com/teremuhamblin/SmartTools.git
 cd SmartTools
 
-# Lancer les tests unitaires
+# Tests unitaires
 ./gradlew test
 
-# Compiler l'APK Debug
+# Compilation de l’APK Debug
 ./gradlew assembleDebug
 ```
 
@@ -186,37 +280,44 @@ cd SmartTools
 ---
 
 <a id="securite"></a>
-## 🔒 Confidentialité & Sécurité
+## 🔒 Confidentialité et sécurité
 
-* 🛡️ **100 % Hors-ligne :** zéro télémétrie, zéro publicité, aucune requête réseau vers un serveur tiers.
-* 🔐 **Respect total du Knox :** lecture seule des métriques système, aucune altération du bit Knox (`0x0`).
-* 📂 **Partage PDF cloisonné :** `FileProvider` strictement limité au sous-dossier interne `reports/` (`file_paths.xml`).
-* 🔋 **Respect de la batterie :** le `WorkManager` du widget s'arrête automatiquement dès qu'aucun widget n'est actif sur l'écran d'accueil.
-* 👀 **Permissions transparentes :** `POST_NOTIFICATIONS` (Android 13+) demandée uniquement pour les alertes Batterie / *Modes et Routines* ; visibilité `<queries>` restreinte à `com.samsung.android.app.routines`.
+La confidentialité est un principe de conception du projet. Les fonctionnalités décrites ci-dessous doivent toutefois être considérées dans le contexte des permissions Android et de la configuration de l’appareil.
+
+- 🛡️ **Pas de publicité ni de télémétrie annoncée.** L’application est conçue pour fonctionner sans collecte analytique ni service tiers de suivi.
+- 📡 **Fonctionnement hors ligne annoncé.** Les fonctions de diagnostic s’appuient sur les informations accessibles localement à l’appareil ; consultez le manifeste et le code pour vérifier les permissions et dépendances de la version que vous compilez.
+- 🔐 **Knox en lecture seule.** SmartTools consulte l’état disponible et n’altère pas le bit Knox.
+- 📂 **Partage de rapports limité.** Le `FileProvider` est configuré pour exposer le dossier de rapports de l’application, plutôt que son stockage interne complet.
+- 🔋 **Tâches en arrière-plan maîtrisées.** Les mises à jour du widget reposent sur WorkManager et sont associées à son cycle d’utilisation.
+- 👀 **Permissions contextualisées.** Les notifications nécessitent l’autorisation correspondante sur Android 13 et versions ultérieures ; l’intégration Samsung s’appuie sur les composants déclarés par l’application.
+
+**Pour les mainteneurs :** vérifiez les permissions du manifeste, les chemins `FileProvider`, les dépendances et les composants exportés lors de chaque évolution. Les informations de ce README décrivent l’intention du projet et ne remplacent pas un audit de sécurité indépendant.
 
 ---
 
 <a id="contribuer"></a>
 ## 🤝 Contribuer
 
-Les contributions, signalements de bugs et suggestions sont les bienvenus !
+Les contributions, rapports de bugs et propositions d’amélioration sont les bienvenus. Pour faciliter leur examen :
 
-1. Forkez le dépôt.
-2. Créez votre branche : `git checkout -b feature/NouvelleFonctionnalite`
-3. Commitez vos modifications : `git commit -m 'feat: ajout de la fonctionnalité X'`
-4. Poussez sur votre branche : `git push origin feature/NouvelleFonctionnalite`
-5. Ouvrez une **Pull Request**.
+1. Ouvrez une issue pour décrire un problème ou discuter d’une évolution importante.
+2. Forkez le dépôt et créez une branche dédiée : `git checkout -b feature/ma-fonctionnalite`.
+3. Faites des changements ciblés et ajoutez ou adaptez les tests pertinents.
+4. Vérifiez le projet avec `./gradlew test`.
+5. Ouvrez une Pull Request avec le contexte, les changements et les étapes de validation.
 
 ---
 
+<a id="licence"></a>
 ## 📄 Licence
 
-Ce projet est distribué sous licence **MIT**. Consultez le fichier [`LICENSE`](LICENSE) pour plus d'informations.
+Ce projet est distribué sous licence **MIT**. Consultez le fichier [`LICENSE`](LICENSE) pour les conditions complètes.
 
 ---
 
 <div align="center">
 
-Fait avec ☕ et **Kotlin** pour **Samsung Galaxy** • **v1.2.0** • [⬆️ Retour en haut](#top)
+**Fait avec ☕ et Kotlin pour Samsung Galaxy**  
+**SmartTools v1.2.0** · [⬆️ Retour en haut](#top)
 
 </div>
